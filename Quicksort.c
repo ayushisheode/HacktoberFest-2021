@@ -30,19 +30,27 @@ void quicksort(int number[25],int first,int last){
 
 int main(){
    int i, count, number[25];
+   char c;
+   do{
+         printf("How many elements are u going to enter?: ");
+         scanf("%d",&count);
 
-   printf("How many elements are u going to enter?: ");
-   scanf("%d",&count);
+         printf("Enter %d elements: \n", count);
+         for(i=0;i<count;i++)
+            scanf("%d",&number[i]);
 
-   printf("Enter %d elements: ", count);
-   for(i=0;i<count;i++)
-      scanf("%d",&number[i]);
+         quicksort(number,0,count-1);
 
-   quicksort(number,0,count-1);
-
-   printf("Order of Sorted elements: ");
-   for(i=0;i<count;i++)
-      printf(" %d",number[i]);
-
-   return 0;
+         printf("Order of Sorted elements: ");
+      
+         for(i=0;i<count;i++)
+            printf(" %d",number[i]);
+            
+        printf("\nDo you want to continue (Y/N)?");
+	    scanf(" %c", &c);   
+    
+   }while (c == 'y' || c == 'Y'); 
+	       
+	   printf("Thnak you!");  
+               return 0;
 }
