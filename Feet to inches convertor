@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <conio.h>
+float main()
+{
+    float inches,feet,a;
+    
+
+    printf("Enter the value of inches:");
+    scanf("%f",&inches);
+
+    feet=inches/12;    
+    inches= inches%12;
+    
+
+
+    printf("total inches entered:%f\n",inches);
+    printf("total feet will be: %f feet and %d inches", feet,inches);
+    return 0;
+
+}
