@@ -2,12 +2,12 @@
 int main()
 {
     int a[100],n,i;
-    printf("\n Enter the  size of array : ");
+    printf("\n Enter the size of array(<=100) : ");
     scanf("%d",&n);
     printf("\n Enter array : ");
     for(i=0;i<n;i++)
     {
-        scanf("%d",a[i]);
+        scanf("%d",&a[i]);
     }
     int j,temp;
     //bubble sort code.
